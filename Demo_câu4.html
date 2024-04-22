@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhóm 1</title>
+</head>
+<body>
+<script>
+    function creatCounter() {
+        // khai báo một biến counter và gán giá trị ban đầu là 0.
+        let counter = 0;
+        // định nghĩa một hàm nội bộ increase
+        function increase() {
+            // tăng giá trị của counter lên 1 mỗi lần được gọi
+            return ++counter;
+        }
+        // trả về giá trị mới của counter
+        return increase;
+    }
+    // Gán createCounter cho counter1
+    const counter1 = creatCounter();
+    // gọi counter1() thực hiện việc gọi hàm increase được trả về từ createCounter.
+    console.log (counter1());
+    console.log (counter1());
+    console.log (counter1());
+    // Kết quả khi chạy chương trình sẽ là số đếm tăng dần: 1, 2, 3...
+    // do mỗi lần gọi counter1(), giá trị của counter tăng lên và được in ra console.
+
+</script>
+</body>
+</html>
